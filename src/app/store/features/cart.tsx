@@ -5,7 +5,7 @@ import { createSlice } from '@reduxjs/toolkit'
 // Define a type for the slice state
 
 // Define the initial state using that type
-const initialState:Productinfo[] = [];
+let initialState:Productinfo[] = [];
 
 export const cartSlice = createSlice({
   name: 'counter',
@@ -19,7 +19,7 @@ export const cartSlice = createSlice({
     },
 
     deltItem(state,{payload}){
-      const index = state.findIndex((val) => val.id === payload);
+      let index = state.findIndex((val) => val.id === payload);
       if (index !== -1) {
         state.splice(index, 1);
       }
@@ -28,6 +28,6 @@ export const cartSlice = createSlice({
   },
 })
 
-export const { addToCart , deltItem } = cartSlice.actions
+export let { addToCart , deltItem } = cartSlice.actions
 
 export default cartSlice.reducer
