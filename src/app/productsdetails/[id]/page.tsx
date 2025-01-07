@@ -7,7 +7,7 @@ import { addToCart } from '@/app/store/features/cart';
 import { toast } from 'sonner';
 import { Productinfo } from '@/app/components/Products';
 
-export const clothsArray:Productinfo[] = [
+const clothsArray:Productinfo[] = [
     {
       id: 1,
       name: "Black linnone trouser",
