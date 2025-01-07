@@ -195,7 +195,6 @@ const ProductDetails = (props: { params: { id: string } }) => {
     image: product[0].image,
     reviews: product[0].reviews,
     Save: product[0].Save,
-    quantity: quantity,
   });
 
   const addToCartFun = () => {
