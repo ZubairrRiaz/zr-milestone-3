@@ -202,7 +202,7 @@ const ProductDetails = (props: { params: { id: string } }) => {
       ...cartItem,
       discountPrice: totalDiscountPrice.toString(), // Convert to string
       originalPrice: totalOriginalPrice.toString(), // Convert to string
-      quantity: quantity,
+      
     };
     setCartItem(updatedCartItem);
     dispatch(addToCart(updatedCartItem));
