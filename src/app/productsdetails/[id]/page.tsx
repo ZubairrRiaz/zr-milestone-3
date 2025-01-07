@@ -187,27 +187,28 @@ const ProductDetails = (props: { params: { id: string } }) => {
   const totalDiscountPrice = discountPrice * quantity;
   const totalOriginalPrice = originalPrice * quantity;
 
-  const [cartItem, setCartItem] = useState({
+  const [cartItem, setCartItem] = useState(() => ({
     id: product[0].id,
     name: product[0].name,
-    discountPrice: totalDiscountPrice,
-    originalPrice: totalOriginalPrice,
+    discountPrice: product[0].discountPrice,
+    originalPrice: product[0].originalPrice,
     image: product[0].image,
     reviews: product[0].reviews,
     Save: product[0].Save,
-  });
-
+  }));
+  
   const addToCartFun = () => {
     const updatedCartItem = {
       ...cartItem,
-      discountPrice: totalDiscountPrice,
-      originalPrice: totalOriginalPrice,
+      discountPrice: totalDiscountPrice.toString(), // Convert to string
+      originalPrice: totalOriginalPrice.toString(), // Convert to string
       quantity: quantity,
     };
     setCartItem(updatedCartItem);
     dispatch(addToCart(updatedCartItem));
     toast(`Added ${quantity} Quantity Of (${product[0].name}) In Cart.`);
   };
+  
 
 
   return (
