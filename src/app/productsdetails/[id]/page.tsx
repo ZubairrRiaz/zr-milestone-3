@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { IoStarSharp } from "react-icons/io5";
-import { useAppDispatch, useAppSelector } from '@/app/store/hooks';
+import { useAppDispatch } from '@/app/store/hooks';
 import { addToCart } from '@/app/store/features/cart';
 import { toast } from 'sonner';
 
