@@ -210,7 +210,6 @@ const ProductDetails = (props: { params: { id: string } }) => {
     toast(`Added ${quantity} Quantity Of (${product[0].name}) In Cart.`);
   };
 
-    const cloths = useAppSelector((state) => state.cloths)
 
   return (
     <div className="font-[family-name:var(--font-geist-sans)] sm:h-screen sm:w-[80%] mx-auto sm:flex sm:justify-evenly items-center sm:my-10 p-6 bg-gradient-to-r from-[#9fc6d2] to-[#4a4e69] sm:rounded-xl shadow-xl">
