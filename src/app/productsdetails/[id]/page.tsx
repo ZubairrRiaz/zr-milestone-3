@@ -5,8 +5,9 @@ import { IoStarSharp } from "react-icons/io5";
 import { useAppDispatch } from '@/app/store/hooks';
 import { addToCart } from '@/app/store/features/cart';
 import { toast } from 'sonner';
+import { Productinfo } from '@/app/components/Products';
 
-export const clothsArray = [
+export const clothsArray:Productinfo[] = [
     {
       id: 1,
       name: "Black linnone trouser",
