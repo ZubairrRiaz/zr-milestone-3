@@ -29,7 +29,7 @@ const ServiceCards = () => {
           <FaSmile size={40} />
         </div>
         <h2 className="text-2xl font-bold mb-2 text-center">Client Satisfaction</h2>
-        <p className="text-center">Our clients' satisfaction is our top priority.</p>
+        <p className="text-center">Our clients satisfaction is our top priority.</p>
       </div>
     </div>
   );
