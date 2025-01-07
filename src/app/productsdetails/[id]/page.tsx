@@ -165,6 +165,21 @@ const ProductDetails = (props: { params: { id: string } }) => {
 
   const [quantity, setQuantity] = useState(1);
 
+  const [cartItem, setCartItem] = useState(() => {
+    if (product.length > 0) {
+      return {
+        id: product[0].id,
+        name: product[0].name,
+        discountPrice: product[0].discountPrice,
+        originalPrice: product[0].originalPrice,
+        image: product[0].image,
+        reviews: product[0].reviews,
+        Save: product[0].Save,
+      };
+    }
+    return null;
+  });
+
   const decreaseQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
@@ -175,7 +190,7 @@ const ProductDetails = (props: { params: { id: string } }) => {
     setQuantity(quantity + 1);
   };
 
-  if (!product) {
+  if (!product || !cartItem) {
     return <div>Product not found</div>;
   }
 
@@ -186,16 +201,6 @@ const ProductDetails = (props: { params: { id: string } }) => {
   // Calculate total prices as numbers
   const totalDiscountPrice = discountPrice * quantity;
   const totalOriginalPrice = originalPrice * quantity;
-
-  const [cartItem, setCartItem] = useState(() => ({
-    id: product[0].id,
-    name: product[0].name,
-    discountPrice: product[0].discountPrice,
-    originalPrice: product[0].originalPrice,
-    image: product[0].image,
-    reviews: product[0].reviews,
-    Save: product[0].Save,
-  }));
   
   const addToCartFun = () => {
     const updatedCartItem = {
@@ -209,8 +214,6 @@ const ProductDetails = (props: { params: { id: string } }) => {
     toast(`Added ${quantity} Quantity Of (${product[0].name}) In Cart.`);
   };
   
-
-
   return (
     <div className="font-[family-name:var(--font-geist-sans)] sm:h-screen sm:w-[80%] mx-auto sm:flex sm:justify-evenly items-center sm:my-10 p-6 bg-gradient-to-r from-[#9fc6d2] to-[#4a4e69] sm:rounded-xl shadow-xl">
       <div className='flex justify-center'>
