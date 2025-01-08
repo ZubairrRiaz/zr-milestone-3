@@ -16,12 +16,12 @@ export interface Productinfo {
   Save: string;
 }
 
-const clothsArray = [
+export const clothsArray:Productinfo[] = [
   {
     id: 1,
     name: "Black linnone trouser",
-    discountPrice: "PKR 2499",
-    originalPrice: "PKR 3999",
+    discountPrice: "2499",
+    originalPrice: "3999",
     image: "/t8.png",
     reviews: "78",
     Save: "40%",
@@ -29,8 +29,8 @@ const clothsArray = [
   {
     id: 2,
     name: "Pleated green trouser",
-    discountPrice: "PKR 1999",
-    originalPrice: "PKR 2999",
+    discountPrice: "1999",
+    originalPrice: "2999",
     image: "/t7.png",
     reviews: "67",
     Save: "30%",
@@ -38,8 +38,8 @@ const clothsArray = [
   {
     id: 3,
     name: "Light green Khakis trouser",
-    discountPrice: "PKR 1499",
-    originalPrice: "PKR 1999",
+    discountPrice: "1499",
+    originalPrice: "1999",
     image: "/t6.png",
     reviews: "65",
     Save: "35%",
@@ -47,8 +47,8 @@ const clothsArray = [
   {
     id: 4,
     name: "Brown lounge trouser",
-    discountPrice: "PKR 1499",
-    originalPrice: "PKR 2499",
+    discountPrice: "1499",
+    originalPrice: "2499",
     image: "/t5.png",
     reviews: "45",
     Save: "45%",
@@ -56,8 +56,8 @@ const clothsArray = [
   {
     id: 5,
     name: "Dark marroon trouser",
-    discountPrice: "PKR 2999",
-    originalPrice: "PKR 3999",
+    discountPrice: "2999",
+    originalPrice: "3999",
     image: "/t4.png",
     reviews: "98",
     Save: "20%",
@@ -65,8 +65,8 @@ const clothsArray = [
   {
     id: 6,
     name: "Black wooley trouser",
-    discountPrice: "PKR 999",
-    originalPrice: "PKR 1499",
+    discountPrice: "999",
+    originalPrice: "1499",
     image: "/t3.png",
     reviews: "17",
     Save: "49%",
@@ -74,8 +74,8 @@ const clothsArray = [
   {
     id: 7,
     name: "Dark crimpson trouser",
-    discountPrice: "PKR 2499",
-    originalPrice: "PKR 3499",
+    discountPrice: "2499",
+    originalPrice: "3499",
     image: "/t2.png",
     reviews: "34",
     Save: "40%",
@@ -83,8 +83,8 @@ const clothsArray = [
   {
     id: 8,
     name: "Black chinose trouser",
-    discountPrice: "PKR 1299",
-    originalPrice: "PKR 1899",
+    discountPrice: "1299",
+    originalPrice: "1899",
     image: "/t1.png",
     reviews: "24",
     Save: "25%",
@@ -92,8 +92,8 @@ const clothsArray = [
   {
     id: 9,
     name: "Dark gray dyee t-shirt",
-    discountPrice: "PKR 2499",
-    originalPrice: "PKR 2999",
+    discountPrice: "2499",
+    originalPrice: "2999",
     image: "/s8.png",
     reviews: "56",
     Save: "15%",
@@ -101,8 +101,8 @@ const clothsArray = [
   {
     id: 10,
     name: "Mint green thread t-shirt",
-    discountPrice: "PKR 3499",
-    originalPrice: "PKR 4999",
+    discountPrice: "3499",
+    originalPrice: "4999",
     image: "/s7.png",
     reviews: "75",
     Save: "43%",
@@ -110,8 +110,8 @@ const clothsArray = [
   {
     id: 11,
     name: "Garmet purple chaam t-shirt",
-    discountPrice: "PKR 5499",
-    originalPrice: "PKR 6999",
+    discountPrice: "5499",
+    originalPrice: "6999",
     image: "/s6.png",
     reviews: "86",
     Save: "20%",
@@ -119,8 +119,8 @@ const clothsArray = [
   {
     id: 12,
     name: "Dark marroon tees t-shirt",
-    discountPrice: "PKR 1199",
-    originalPrice: "PKR 2599",
+    discountPrice: "1199",
+    originalPrice: "2599",
     image: "/s5.png",
     reviews: "35",
     Save: "55%",
@@ -128,8 +128,8 @@ const clothsArray = [
   {
     id: 13,
     name: "Safety pink clean t-shirt",
-    discountPrice: "PKR 2499",
-    originalPrice: "PKR 4499",
+    discountPrice: "2499",
+    originalPrice: "4499",
     image: "/s4.png",
     reviews: "78",
     Save: "50%",
@@ -137,8 +137,8 @@ const clothsArray = [
   {
     id: 14,
     name: "Heather red cozy t-shirt",
-    discountPrice: "PKR 2499",
-    originalPrice: "PKR 3999",
+    discountPrice: "2499",
+    originalPrice: "3999",
     image: "/s3.png",
     reviews: "98",
     Save: "38%",
@@ -146,8 +146,8 @@ const clothsArray = [
   {
     id: 15,
     name: "Cardinal green  urban t-shirt",
-    discountPrice: "PKR 3499",
-    originalPrice: "PKR 3999",
+    discountPrice: "3499",
+    originalPrice: "3999",
     image: "/s2.png",
     reviews: "14",
     Save: "20%",
@@ -155,8 +155,8 @@ const clothsArray = [
   {
     id: 16,
     name: "Coral silk fresh t-shirt",
-    discountPrice: "PKR 499",
-    originalPrice: "PKR 999",
+    discountPrice: "499",
+    originalPrice: "999",
     image: "/s7.png",
     reviews: "66",
     Save: "50%",
@@ -227,10 +227,10 @@ const Products = () => {
 
                   <p className="text-base sm:text-lg text-black">
                     <span className="line-through text-gray-700 text-opacity-65">
-                      {product.originalPrice}
+                      PKR {product.originalPrice}
                     </span>
                     <br />
-                    {product.discountPrice}
+                    PKR {product.discountPrice}
                   </p>
                 </div>
               </Link>

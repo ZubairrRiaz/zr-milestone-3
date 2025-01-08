@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="w-full h-[40px] bg-[#9fc6d2] text-white text-center content-center overflow-hidden whitespace-nowrap">
           <div className="inline-block animate-marquee sm:w-[85%]">
             Get free shipping when you order over <span className="text-black">Rs.5999 </span>
-            Get the best quality products with unbeleiveble <span className="text-black">Discounts upto 55%</span>
+            Get the best quality T-Shirts and Trousers with unbeleiveble <span className="text-black">Discounts upto 55%</span>
           </div>
           
         </div>
