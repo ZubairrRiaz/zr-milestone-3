@@ -1,7 +1,7 @@
 'use client'
 import { Productinfo } from '@/app/components/Products';
 import { createSlice } from '@reduxjs/toolkit'
-import { clothsArray } from '@/app/productsdetails/[id]/page';
+import { clothsArray } from '@/app/components/Products';
 
 
 // Define a type for the slice state
