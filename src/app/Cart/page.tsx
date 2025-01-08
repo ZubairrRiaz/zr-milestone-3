@@ -56,7 +56,7 @@ const CartPage = () => {
                             </button>
                         </div>
                     ))}
-                    <div className="mt-6 p-6 bg-gradient-to-r from-[#4a4e69] to-[#9fc6d2] text-white rounded-lg shadow-inner">
+                    <div className="mt-6 p-6 bg-gradient-to-r from-[#4a4e69] to-[#9fc6d2] text-white rounded-lg shadow-inner space-y-2">
                         <h2 className="text-2xl font-bold text-white mb-4">Order Summary</h2>
                         <p className="text-lg">Total Products: {totalProducts}</p>
                         <p className="text-lg">Total Price: PKR {totalPrice.toFixed(2)}</p>
