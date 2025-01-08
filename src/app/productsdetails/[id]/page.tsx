@@ -5,160 +5,161 @@ import { IoStarSharp } from "react-icons/io5";
 import { useAppDispatch } from '@/app/store/hooks';
 import { addToCart } from '@/app/store/features/cart';
 import { toast } from 'sonner';
-import { clothsArray } from '@/app/components/Products';
+import { Productinfo } from '@/app/components/Products';
 
-// export const clothsArray:Productinfo[] = [
-//     {
-//       id: 1,
-//       name: "Black linnone trouser",
-//       discountPrice: "2499", 
-//       originalPrice: "3999", 
-//       image: "/t8.png",
-//       reviews: '78',
-//       Save: '40%'
-//     },
-//     {
-//       id: 2,
-//       name: "Pleated green trouser",
-//       discountPrice: "1999", 
-//       originalPrice: "2999", 
-//       image: "/t7.png",
-//       reviews: '67',
-//       Save: '30%'
-//     },
-//     {
-//       id: 3,
-//       name: "Light green Khakis trouser",
-//       discountPrice: "1499", 
-//       originalPrice: "1999", 
-//       image: "/t6.png",
-//       reviews: '65',
-//       Save: '35%'
-//     },
-//     {
-//       id: 4,
-//       name: "Brown lounge trouser",
-//       discountPrice: "1499", 
-//       originalPrice: "2499", 
-//       image: "/t5.png",
-//       reviews: '45',
-//       Save: '45%'
-//     },
-//     {
-//       id: 5,
-//       name: "Dark marroon trouser",
-//       discountPrice: "2999", 
-//       originalPrice: "3999", 
-//       image: "/t4.png",
-//       reviews: '98',
-//       Save: '20%'
-//     },
-//     {
-//       id: 6,
-//       name: "Black wooley trouser",
-//       discountPrice: "999", 
-//       originalPrice: "1499", 
-//       image: "/t3.png",
-//       reviews: '17',
-//       Save: '49%'
-//     },
-//     {
-//       id: 7,
-//       name: "Dark crimpson trouser",
-//       discountPrice: "2499", 
-//       originalPrice: "3499", 
-//       image: "/t2.png",
-//       reviews: '34',
-//       Save: '40%'
-//     },
-//     {
-//       id: 8,
-//       name: "Black chinose trouser",
-//       discountPrice: "1299", 
-//       originalPrice: "1899", 
-//       image: "/t1.png",
-//       reviews: '24',
-//       Save: '25%'
-//     },
-//     {
-//       id: 9,
-//       name: "Dark gray dyee t-shirt",
-//       discountPrice: "2499", 
-//       originalPrice: "2999", 
-//       image: "/s8.png",
-//       reviews: '56',
-//       Save: '15%'
-//     },
-//     {
-//       id: 10,
-//       name: "Mint green thread t-shirt",
-//       discountPrice: "3499", 
-//       originalPrice: "4999", 
-//       image: "/s7.png",
-//       reviews: '75',
-//       Save: '43%'
-//     },
-//     {
-//       id: 11,
-//       name: "Garmet purple chaam t-shirt",
-//       discountPrice: "5499", 
-//       originalPrice: "6999", 
-//       image: "/s6.png",
-//       reviews: '86',
-//       Save: '20%'
-//     },
-//     {
-//       id: 12,
-//       name: "Dark marroon tees t-shirt",
-//       discountPrice: "1199", 
-//       originalPrice: "2599", 
-//       image: "/s5.png",
-//       reviews: '35',
-//       Save: '55%'
-//     },
-//     {
-//       id: 13,
-//       name: "Safety pink clean t-shirt",
-//       discountPrice: "2499", 
-//       originalPrice: "4499", 
-//       image: "/s4.png",
-//       reviews: '78',
-//       Save: '50%'
-//     },
-//     {
-//       id: 14,
-//       name: "Heather red cozy t-shirt",
-//       discountPrice: "2499", 
-//       originalPrice: "3999", 
-//       image: "/s3.png",
-//       reviews: '98',
-//       Save: '38%'
-//     },
-//     {
-//       id: 15,
-//       name: "Cardinal green  urban t-shirt",
-//       discountPrice: "3499", 
-//       originalPrice: "3999", 
-//       image: "/s2.png",
-//       reviews: '14',
-//       Save: '20%'
-//     },
-//     {
-//       id: 16,
-//       name: "Coral silk fresh t-shirt",
-//       discountPrice: "499", 
-//       originalPrice: "999", 
-//       image: "/s7.png",
-//       reviews: '66',
-//       Save: '50%'
-//     },
-//   ];
+
+export const clothsArray:Productinfo[] = [
+    {
+      id: 1,
+      name: "Black linnone trouser",
+      discountPrice: "2499", 
+      originalPrice: "3999", 
+      image: "/t8.png",
+      reviews: '78',
+      Save: '40%'
+    },
+    {
+      id: 2,
+      name: "Pleated green trouser",
+      discountPrice: "1999", 
+      originalPrice: "2999", 
+      image: "/t7.png",
+      reviews: '67',
+      Save: '30%'
+    },
+    {
+      id: 3,
+      name: "Light green Khakis trouser",
+      discountPrice: "1499", 
+      originalPrice: "1999", 
+      image: "/t6.png",
+      reviews: '65',
+      Save: '35%'
+    },
+    {
+      id: 4,
+      name: "Brown lounge trouser",
+      discountPrice: "1499", 
+      originalPrice: "2499", 
+      image: "/t5.png",
+      reviews: '45',
+      Save: '45%'
+    },
+    {
+      id: 5,
+      name: "Dark marroon trouser",
+      discountPrice: "2999", 
+      originalPrice: "3999", 
+      image: "/t4.png",
+      reviews: '98',
+      Save: '20%'
+    },
+    {
+      id: 6,
+      name: "Black wooley trouser",
+      discountPrice: "999", 
+      originalPrice: "1499", 
+      image: "/t3.png",
+      reviews: '17',
+      Save: '49%'
+    },
+    {
+      id: 7,
+      name: "Dark crimpson trouser",
+      discountPrice: "2499", 
+      originalPrice: "3499", 
+      image: "/t2.png",
+      reviews: '34',
+      Save: '40%'
+    },
+    {
+      id: 8,
+      name: "Black chinose trouser",
+      discountPrice: "1299", 
+      originalPrice: "1899", 
+      image: "/t1.png",
+      reviews: '24',
+      Save: '25%'
+    },
+    {
+      id: 9,
+      name: "Dark gray dyee t-shirt",
+      discountPrice: "2499", 
+      originalPrice: "2999", 
+      image: "/s8.png",
+      reviews: '56',
+      Save: '15%'
+    },
+    {
+      id: 10,
+      name: "Mint green thread t-shirt",
+      discountPrice: "3499", 
+      originalPrice: "4999", 
+      image: "/s7.png",
+      reviews: '75',
+      Save: '43%'
+    },
+    {
+      id: 11,
+      name: "Garmet purple chaam t-shirt",
+      discountPrice: "5499", 
+      originalPrice: "6999", 
+      image: "/s6.png",
+      reviews: '86',
+      Save: '20%'
+    },
+    {
+      id: 12,
+      name: "Dark marroon tees t-shirt",
+      discountPrice: "1199", 
+      originalPrice: "2599", 
+      image: "/s5.png",
+      reviews: '35',
+      Save: '55%'
+    },
+    {
+      id: 13,
+      name: "Safety pink clean t-shirt",
+      discountPrice: "2499", 
+      originalPrice: "4499", 
+      image: "/s4.png",
+      reviews: '78',
+      Save: '50%'
+    },
+    {
+      id: 14,
+      name: "Heather red cozy t-shirt",
+      discountPrice: "2499", 
+      originalPrice: "3999", 
+      image: "/s3.png",
+      reviews: '98',
+      Save: '38%'
+    },
+    {
+      id: 15,
+      name: "Cardinal green  urban t-shirt",
+      discountPrice: "3499", 
+      originalPrice: "3999", 
+      image: "/s2.png",
+      reviews: '14',
+      Save: '20%'
+    },
+    {
+      id: 16,
+      name: "Coral silk fresh t-shirt",
+      discountPrice: "499", 
+      originalPrice: "999", 
+      image: "/s7.png",
+      reviews: '66',
+      Save: '50%'
+    },
+  ];
 
 const ProductDetails = (props: { params: { id: string } }) => {
-
+  
   // Convert the id from string to number
   const productId = Number(props.params.id);
-
+  
   // Find the product from the clothsArray based on the number ID
   const product = clothsArray.filter((item) => item.id === productId);
  
